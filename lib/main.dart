@@ -1,3 +1,4 @@
+import 'package:day_1/contactus.dart';
 import 'package:day_1/counter.dart';
 import 'package:day_1/profile.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/contactus': (context) => ContactUsScreen(),
+      },
       theme: ThemeData(
         textTheme: TextTheme(
           headline1: TextStyle(

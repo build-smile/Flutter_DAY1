@@ -45,6 +45,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 leading: Icon(Icons.email),
                 title: Text('natchapat@gmail.com'),
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/contactus',
+                    arguments: 'Hello World');
+              },
+              child: Text('Contact us'),
             )
           ],
         ),
