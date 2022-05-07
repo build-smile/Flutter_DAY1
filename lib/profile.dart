@@ -11,32 +11,41 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal,
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.blue,
-                height: 100,
-                child: Text('Hello'),
+            CircleAvatar(
+              radius: 75,
+              backgroundImage: AssetImage('images/me.jpg'),
+            ),
+            Text(
+              'Natchapat Laotrakul',
+              style: Theme.of(context).textTheme.headline1,
+            ),
+            Text(
+              'Flutter Developer',
+              style: TextStyle(
+                color: Colors.teal.shade200,
+                fontSize: 18,
               ),
             ),
-            Expanded(
-                flex: 3,
-                child: Container(
-                  color: Colors.red,
-                  height: 100,
-                  child: Text('Hello'),
-                )),
-            Expanded(
-              child: Container(
-                color: Colors.green,
-                height: 100,
-                child: Text('Hello'),
+            SizedBox(
+              height: 20,
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('0258569569'),
               ),
             ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.email),
+                title: Text('natchapat@gmail.com'),
+              ),
+            )
           ],
         ),
       ),
